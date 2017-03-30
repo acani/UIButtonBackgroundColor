@@ -2,13 +2,8 @@ import UIKit
 
 extension UIButton {
     public func setBackgroundColor(_ color: UIColor?, forState state: UIControlState) {
-        
-        let saveCornerRadius = layer.cornerRadius
-        
         guard let color = color else { return setBackgroundImage(nil, for: state) }
         setBackgroundImage(UIImage.imageColored(color), for: state)
-        
-        layer.cornerRadius = saveCornerRadius
     }
 }
 
